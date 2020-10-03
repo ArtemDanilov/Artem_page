@@ -1,0 +1,17 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass sass/main.scss css/style.css -w",
+    "lite-server": "lite-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
