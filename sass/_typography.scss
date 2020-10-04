@@ -20,40 +20,44 @@
         letter-spacing: -6px;
     }
 
-    &__letter--a {
-        animation: resize-a .3s ease-out;
-        animation-delay: .6s;
+    span[class^="name__letter"] {
         animation-fill-mode: both;
     }
 
+    &__letter--a,
+    &__letter--r,
+    &__letter--t {
+        color: $color-red;
+    }
+
+    &__letter--a {
+        animation: resize-a .3s ease-out;
+        animation-delay: .6s;
+    }
 
     &__letter--r {
         animation: hide .5s;
         animation-delay: 1.2s;
-        animation-fill-mode: both;
     }
 
     &__letter--t {
         animation: hide .3s;
         animation-delay: 1.3s;
-        animation-fill-mode: both;
     }
 
     &__letter--e {
-        animation: hide .3s;
-        animation-delay: 1.4s;
-        animation-fill-mode: both;
+        animation: hide 2s ease-out;
+        animation-delay: 1.8s;
     }
 
     &__letter--m {
-        animation: hide .3s;
-        animation-delay: 1.5s;
-        animation-fill-mode: both;
+        animation: hide 2s ease-out;
+        animation-delay: 1.8s;
     }
 
     &__second-name {
         margin-left: 2rem;
-        animation: hide 3s ease-out;
+        animation: hide 2s ease-out;
         animation-delay: 1.8s;
         animation-fill-mode: both;
 
