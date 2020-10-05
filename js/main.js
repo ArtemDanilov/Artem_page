@@ -1,3 +1,4 @@
-import {cursorMove} from "./cursor.js"
+import {cursorMove, activeLinks} from "./cursor.js"
 
 window.addEventListener('mousemove', cursorMove)
+activeLinks()

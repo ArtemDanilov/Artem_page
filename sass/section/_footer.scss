@@ -1,3 +1,16 @@
+.footer {
+    width: 50%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: hide 2s ease-in;
+    animation-delay: 1.8s;
+    animation-fill-mode: both;
+
+    display: flex;
+    justify-content: space-between;
+}
 a {
     color: $color-white;
     font-size: 3rem;
