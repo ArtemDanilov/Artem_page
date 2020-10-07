@@ -1,6 +1,23 @@
-// *****VARIABLES***** //
+// *****FONTS***** //
+@font-face {
+    font-family: "Roboto-bold";
+    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-regular";
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+// *****COLOR VARIABLES***** //
 $color-white: #fff;
 $color-red: #d00000;
+
+// *****FONT VARIABLES***** //
+
+$font-primary-bold: "Roboto-bold", sans-serif;
+$font-primary-normal: "Roboto-regular", sans-serif;
+
+
 
 html {
     cursor: none;
@@ -48,7 +65,7 @@ body {
         transition: padding .3s ease;   
 
         &-active {
-            padding: 2rem;
+            padding: 3rem;
         }
     }
 }
