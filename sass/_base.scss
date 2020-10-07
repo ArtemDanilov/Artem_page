@@ -11,6 +11,7 @@
 // *****COLOR VARIABLES***** //
 $color-white: #fff;
 $color-red: #d00000;
+$color-grey: #b9b9b9;
 
 // *****FONT VARIABLES***** //
 
@@ -38,6 +39,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    font-family: $font-primary-normal;
 }
 
 .small-circle,
