@@ -24,16 +24,11 @@ module.exports = {
                 }
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader',
+                test: /\.(ttf|svg|woff|woff2|eot|jpe?g|gif|mp4)$/i,
+                loader: 'file-loader',
                 options: {
-                    limit: 4096,
-                    name: './fonts/[name].ext?[hash]'
+                    name: '[path][name].[ext]'
                 }
-            },
-            {
-                test: /\.(jpe?g|gif|mp4)$/i,
-                loader: 'file-loader'
             },
             {
                 test: /\.s(a|c)ss$/i,
@@ -51,7 +46,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "../css/[name].css",
+            filename: "../dist/[name].bundle.css",
         })
     ]
 }

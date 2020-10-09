@@ -16,8 +16,8 @@ $color-black: #000;
 
 // *****FONT VARIABLES***** //
 
-$font-primary-bold: "BillionDreams";
-$font-primary-normal: "Roboto-regular", sans-serif;
+$font-primary: "Roboto-regular", sans-serif;
+$font-secondary: "BillionDreams", italic;
 
 // *****MEDIA QUERIS***** //
 
@@ -49,7 +49,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    font-family: $font-primary-normal;
+    font-family: $font-primary;
 }
 
 
