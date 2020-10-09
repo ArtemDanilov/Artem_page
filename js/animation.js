@@ -46,8 +46,7 @@ export function mobileAnimation() {
   anime({
     targets: '.name',
     opacity: [0, 1],
-    translateY: [`-10%`, `-50%`],
-    translateX: [`-50%`, `-50%`],
+    translateY: [`30%`, 0],
     delay: 500,
     duration: 600,
   });
