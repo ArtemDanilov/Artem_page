@@ -1,7 +1,7 @@
 // *****FONTS***** //
 @font-face {
-    font-family: "Roboto-bold";
-    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-family: "BillionDreams";
+    src: url("../fonts/BillionDreams.ttf") format("truetype");
 }
 @font-face {
     font-family: "Roboto-regular";
@@ -12,19 +12,29 @@
 $color-white: #fff;
 $color-red: #d00000;
 $color-grey: #b9b9b9;
+$color-black: #000;
 
 // *****FONT VARIABLES***** //
 
-$font-primary-bold: "Roboto-bold", sans-serif;
+$font-primary-bold: "BillionDreams";
 $font-primary-normal: "Roboto-regular", sans-serif;
+
+// *****MEDIA QUERIS***** //
+
+$mq-sm: 37.5em;      // 600px
+$mq-md: 56.25em;      // 900px
+$mq-lg: 75em;      // 1200px
 
 
 
 html {
-    cursor: none;
     box-sizing: border-box;
     font-size: 62.5%;     // 10px = 1rem
     overflow: hidden;
+
+    @media only screen and (max-width: $mq-sm) {
+        font-size: 50%;
+    }
 }
 
 *,
@@ -42,29 +52,20 @@ body {
     font-family: $font-primary-normal;
 }
 
-.small-circle,
-.big-circle {
-    position: absolute;
-    transform: translate(-50%,-50%);
-    border-radius: 50%;
-    z-index: 100;
-    pointer-events: none;
-}
 
 @media (any-hover:hover) {
-    .small-circle {
-        width: .8rem;
-        height: .8rem;
-        background-color: $color-red;
-    }
-    
-    .big-circle {
+    .cursor {
+        position: absolute;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        z-index: 100;
         width: 3rem;
         height: 3rem;
         border: 3px solid #fff;
         border-radius: 50%;
         box-shadow: inset 0 0 20px rgba(255,255,255, 0.3), 0 0 20px rgba(255,255,255, 0.5);
         transition: padding .3s ease;   
+        pointer-events: none;
 
         &-active {
             padding: 3rem;
