@@ -1,9 +1,9 @@
 import anime from 'animejs/lib/anime.es.js';
 
-export function animation() {
+export function desktopAnimation() {
     anime({
         targets: '.name__letter--a',
-        fontSize: [`60rem`, `11rem`],
+        fontSize: [`40rem`, `10rem`],
         delay: 1000,
         duration: 500,
         easing: 'easeOutBounce'
@@ -40,4 +40,31 @@ export function animation() {
         duration: 1000,
         easing: 'easeOutQuart'
       });
+}
+
+export function mobileAnimation() {
+  anime({
+    targets: '.name',
+    opacity: [0, 1],
+    translateY: [`-10%`, `-50%`],
+    translateX: [`-50%`, `-50%`],
+    delay: 500,
+    duration: 600,
+  });
+
+  anime({
+    targets: '.footer__links',
+    opacity: [0, 1],
+    translateY: [`30%`, 0],
+    delay: 600,
+    duration: 600,
+  });
+
+  anime({
+    targets: '.footer__contact',
+    opacity: [0, 1],
+    translateY: [`30%`, 0],
+    delay: 700,
+    duration: 600,
+  });
 }
