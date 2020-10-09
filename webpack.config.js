@@ -21,18 +21,6 @@ module.exports = {
                     }
                 }
             },
-            // {
-            //     test: /\.html$/i,
-            //     loader: 'html-loader'
-            // },
-            {
-                test: /\.(jpe?g|gif|mp4)$/i,
-                loader: 'file-loader'
-            },
-            {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
-            },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader',
@@ -40,7 +28,20 @@ module.exports = {
                     limit: 4096,
                     name: './fonts/[name].ext?[hash]'
                 }
-            }
+            },
+            {
+                test: /\.(jpe?g|gif|mp4)$/i,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.s(a|c)ss$/i,
+                exclude: /node_modules/,
+                loaders: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
         ]
-    }
+    },
 }

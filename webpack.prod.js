@@ -1,5 +1,6 @@
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
@@ -22,18 +23,6 @@ module.exports = {
                     }
                 }
             },
-            // {
-            //     test: /\.html$/i,
-            //     loader: 'html-loader'
-            // },
-            {
-                test: /\.(jpe?g|gif|mp4)$/i,
-                loader: 'file-loader'
-            },
-            {
-                test: /\.css$/,
-                loaders: ['style-loader', 'css-loader']
-            },
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader',
@@ -41,11 +30,28 @@ module.exports = {
                     limit: 4096,
                     name: './fonts/[name].ext?[hash]'
                 }
-            }
+            },
+            {
+                test: /\.(jpe?g|gif|mp4)$/i,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.s(a|c)ss$/i,
+                exclude: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+            },
         ]
     },
     plugins: [
         new CleanWebpackPlugin(),
-        // new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "../css/[name].css",
+        })
     ]
 }
