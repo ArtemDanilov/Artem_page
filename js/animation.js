@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es.js';
 export function desktopAnimation() {
     anime({
         targets: '.name__letter--a',
-        fontSize: [`40rem`, `10rem`],
+        fontSize: [`40rem`, `12rem`],
         delay: 1000,
         duration: 500,
         easing: 'easeOutBounce'

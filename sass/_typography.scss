@@ -18,9 +18,13 @@
 
     &>* {
         display: inline;
-        font-size: 6rem;
+        font-size: 8rem;
         font-family: $font-secondary;
         color: $color-white;
+
+        @media only screen and (max-width: $mq-sm) {
+            font-size: 6rem;
+        }
     }
 
     &__first-name {
@@ -37,11 +41,11 @@
         margin-left: 4rem;
 
         &::first-letter {
-            font-size: 10rem;
+            font-size: 12rem;
         }
 
         @media only screen and (max-width: $mq-sm) {
-            margin-left: 4rem;
+            margin-left: 2rem;
         }
     }
 }
