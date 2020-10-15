@@ -29,18 +29,21 @@ html {
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: "Roboto-light", sans-serif;
+    overflow: hidden
+}
+
+.main-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center
-}
-
-@media only screen and (max-width: 37.5em) {
-    body {
-        overflow: hidden
-    }
 }
 
 @media(any-hover: hover) {
@@ -109,14 +112,14 @@ body {
     width: 100%;
     margin-top: 2rem;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: baseline
 }
 
 @media only screen and (max-width: 37.5em) {
     .name {
         display: block;
-        text-align: center;
-        top: 30%
+        text-align: center
     }
 }
 
@@ -169,7 +172,6 @@ body {
 @media only screen and (max-width: 37.5em) {
     .background {
         background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(media/mountain-690104_1280.jpg);
-        background-repeat: no-repeat;
         background-size: cover;
         background-position: center
     }
@@ -208,30 +210,9 @@ body {
 
 .footer {
     display: block;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-top: 5vh
-}
-
-@media only screen and (max-width: 37.5em) {
-    .footer {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center
-    }
-}
-
-@media only screen and (max-width: 56.25em) {
-    .footer {
-        width: 60%
-    }
-}
-
-@media only screen and (min-width: 75em) {
-    .footer {
-        width: 40%
-    }
 }
 
 .footer__icon {
