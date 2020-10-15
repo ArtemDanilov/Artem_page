@@ -1,1 +1,299 @@
-@font-face{font-family:"DancingScript";src:url(fonts/DancingScript.ttf) format("truetype")}@font-face{font-family:"Roboto-light";src:url(fonts/Roboto-light.ttf) format("truetype")}html{box-sizing:border-box;font-size:62.5%}@media only screen and (max-width: 37.5em){html{font-size:50%}}*,*::before,*::after{margin:0;padding:0;box-sizing:inherit}body{width:100%;height:100vh;font-family:"Roboto-light",sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center}@media(any-hover: hover){body{overflow:hidden}}@media(any-hover: hover){.cursor{position:absolute;transform:translate(-50%, -50%);border-radius:50%;z-index:100;width:3rem;height:3rem;border:3px solid #fff;border-radius:50%;box-shadow:inset 0 0 20px rgba(255,255,255,.3),0 0 20px rgba(255,255,255,.5);transition:padding .3s ease;pointer-events:none}.cursor-active{padding:3rem}}@font-face{font-family:"Flaticon";src:url(fonts/icon-font/Flaticon.eot);src:url(fonts/icon-font/Flaticon.eot?#iefix) format("embedded-opentype"),url(fonts/icon-font/Flaticon.woff2) format("woff2"),url(fonts/icon-font/Flaticon.woff) format("woff"),url(fonts/icon-font/Flaticon.ttf) format("truetype"),url(fonts/icon-font/Flaticon.svg#Flaticon) format("svg");font-weight:normal;font-style:normal}@media screen and (-webkit-min-device-pixel-ratio: 0){@font-face{font-family:"Flaticon";src:url(fonts/icon-font/Flaticon.svg#Flaticon) format("svg")}}.fi:before{display:inline-block;font-family:"Flaticon";font-style:normal;font-weight:normal;font-variant:normal;line-height:1;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-smoothing:antialiased}.flaticon-linkedin-logo:before{content:""}.flaticon-github:before{content:""}.flaticon-phone:before{content:""}.name{width:100%;margin-top:6rem;display:flex;justify-content:center}@media only screen and (max-width: 37.5em){.name{display:block;text-align:center;top:30%}}.name>*{display:inline;font-size:8rem;font-family:"DancingScript";color:#fff}@media only screen and (max-width: 37.5em){.name>*{font-size:6rem}}.name__first-name{letter-spacing:-0.8rem}.name__letter--a,.name__letter--r,.name__letter--t{color:#d00000}.name__second-name{margin-left:4rem}.name__second-name::first-letter{font-size:12rem}@media only screen and (max-width: 37.5em){.name__second-name{margin-left:2rem}}.background{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-10}@media only screen and (max-width: 37.5em){.background{background-image:linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),url(media/mountain-690104_1280.jpg);background-size:cover;background-position:center}}.background__filter{position:fixed;width:100%;height:100%;background-color:#000;z-index:-20}@media only screen and (max-width: 37.5em){.background__filter{display:none}}.background__video{display:block;position:fixed;z-index:-50;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;filter:grayscale(1)}@media only screen and (max-width: 37.5em){.background__video{display:none}}.footer{display:block;width:50%;text-align:center;margin-top:5vh}@media only screen and (max-width: 37.5em){.footer{width:100%;display:flex;flex-direction:column;align-items:center}}@media only screen and (max-width: 56.25em){.footer{width:60%}}@media only screen and (min-width: 75em){.footer{width:40%}}.footer__icon{display:inline;margin-right:.5rem;color:currentColor}.footer a{cursor:none}.footer__links{display:flex;justify-content:space-evenly}@media only screen and (max-width: 37.5em){.footer__links{flex-direction:column;justify-content:center}}.footer__link{text-decoration:none;color:#fff;font-size:3rem;padding:1rem;transition:all .3s ease}.footer__link:hover{color:#d00000}.footer__contact{font-size:2rem;color:#fff;letter-spacing:2px;text-align:center;margin-top:6rem}.footer__icon-tel{font-size:1.7rem}.footer__email{margin-top:1rem}.footer__license{margin-top:5rem;text-align:center;color:#b9b9b9;font-size:1.2rem;margin-bottom:2rem}.footer__license a{font-size:1.3rem;text-decoration:none;color:currentColor}
+@font-face {
+    font-family: "DancingScript";
+    src: url(fonts/DancingScript.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: "Roboto-light";
+    src: url(fonts/Roboto-light.ttf) format("truetype")
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 50%
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Roboto-light", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+@media only screen and (max-width: 37.5em) {
+    body {
+        overflow: hidden
+    }
+}
+
+@media(any-hover: hover) {
+    .cursor {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 100;
+        width: 3rem;
+        height: 3rem;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, .3), 0 0 20px rgba(255, 255, 255, .5);
+        transition: padding .3s ease;
+        pointer-events: none
+    }
+
+    .cursor-active {
+        padding: 3rem
+    }
+}
+
+@font-face {
+    font-family: "Flaticon";
+    src: url(fonts/icon-font/Flaticon.eot);
+    src: url(fonts/icon-font/Flaticon.eot?#iefix) format("embedded-opentype"), url(fonts/icon-font/Flaticon.woff2) format("woff2"), url(fonts/icon-font/Flaticon.woff) format("woff"), url(fonts/icon-font/Flaticon.ttf) format("truetype"), url(fonts/icon-font/Flaticon.svg#Flaticon) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url(fonts/icon-font/Flaticon.svg#Flaticon) format("svg")
+    }
+}
+
+.fi:before {
+    display: inline-block;
+    font-family: "Flaticon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased
+}
+
+.flaticon-linkedin-logo:before {
+    content: ""
+}
+
+.flaticon-github:before {
+    content: ""
+}
+
+.flaticon-phone:before {
+    content: ""
+}
+
+.name {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center
+}
+
+@media only screen and (max-width: 37.5em) {
+    .name {
+        display: block;
+        text-align: center;
+        top: 30%
+    }
+}
+
+.name>* {
+    display: inline;
+    font-size: 8rem;
+    font-family: "DancingScript";
+    color: #fff
+}
+
+@media only screen and (max-width: 37.5em) {
+    .name>* {
+        font-size: 6rem
+    }
+}
+
+.name__first-name {
+    letter-spacing: -0.8rem
+}
+
+.name__letter--a,
+.name__letter--r,
+.name__letter--t {
+    color: #d00000
+}
+
+.name__second-name {
+    margin-left: 4rem
+}
+
+.name__second-name::first-letter {
+    font-size: 8rem
+}
+
+@media only screen and (max-width: 37.5em) {
+    .name__second-name {
+        margin-left: 2rem
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10
+}
+
+@media only screen and (max-width: 37.5em) {
+    .background {
+        background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(media/mountain-690104_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center
+    }
+}
+
+.background__filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -20
+}
+
+@media only screen and (max-width: 37.5em) {
+    .background__filter {
+        display: none
+    }
+}
+
+.background__video {
+    display: block;
+    position: fixed;
+    z-index: -50;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: grayscale(1)
+}
+
+@media only screen and (max-width: 37.5em) {
+    .background__video {
+        display: none
+    }
+}
+
+.footer {
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-top: 5vh
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footer {
+        width: 60%
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .footer {
+        width: 40%
+    }
+}
+
+.footer__icon {
+    display: inline;
+    margin-right: .5rem;
+    color: currentColor
+}
+
+.footer a {
+    cursor: none
+}
+
+.footer__links {
+    display: flex;
+    justify-content: space-evenly
+}
+
+@media only screen and (max-width: 37.5em) {
+    .footer__links {
+        flex-direction: column;
+        justify-content: center
+    }
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    padding: 1rem;
+    transition: all .3s ease
+}
+
+.footer__link:hover {
+    color: #d00000
+}
+
+.footer__contact {
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 6rem
+}
+
+.footer__icon-tel {
+    font-size: 1.7rem
+}
+
+.footer__email {
+    margin-top: 1rem
+}
+
+.footer__license {
+    margin-top: 5rem;
+    text-align: center;
+    color: #b9b9b9;
+    font-size: 1.2rem;
+    margin-bottom: 2rem
+}
+
+.footer__license a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: currentColor
+}

@@ -8,6 +8,7 @@
 
     @media only screen and (max-width: $mq-sm) {
         background-image: linear-gradient( to right bottom, rgba($color-black, .7), rgba($color-black, .9) ),  url('../media/mountain-690104_1280.jpg');
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
