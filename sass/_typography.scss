@@ -4,11 +4,11 @@
     
     display: flex;
     justify-content: center;
+    align-items: baseline;
     
     @media only screen and (max-width: $mq-sm) {
         display: block;
         text-align: center;
-        top: 30%;
     }
 
     &>* {
