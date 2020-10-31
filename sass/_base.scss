@@ -30,6 +30,7 @@ $mq-lg: 75em;      // 1200px
 html {
     box-sizing: border-box;
     font-size: 62.5%;     // 10px = 1rem
+    cursor: none; 
 
     @media only screen and (max-width: $mq-sm) {
         font-size: 50%;
@@ -62,17 +63,32 @@ body {
 
 @media (any-hover:hover) {
     .cursor {
-        position: absolute;
-        transform: translate(-50%,-50%);
-        border-radius: 50%;
-        z-index: 100;
-        width: 3rem;
-        height: 3rem;
-        border: 3px solid #fff;
-        border-radius: 50%;
-        box-shadow: inset 0 0 20px rgba(255,255,255, 0.3), 0 0 20px rgba(255,255,255, 0.5);
-        transition: padding .3s ease;   
-        pointer-events: none;
+        position: relative;
+
+        &__main,
+        &__secondary {
+            position: absolute;
+            transform: translate(-50%,-50%);
+        }
+
+        &__main {
+            width: .5rem;
+            height: .5rem;
+            background: red;
+            border-radius: 50%;
+        } 
+
+        &__secondary {
+            border-radius: 50%;
+            z-index: 100;
+            width: 3rem;
+            height: 3rem;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            box-shadow: inset 0 0 20px rgba(255,255,255, 0.3), 0 0 20px rgba(255,255,255, 0.5);
+            transition: padding .3s ease;   
+            pointer-events: none;
+        }
 
         &-active {
             padding: 3rem;
